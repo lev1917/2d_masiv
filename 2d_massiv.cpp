@@ -56,3 +56,12 @@ return;}
 (cur->prev)->next=(cur->next);
 delete cur;
 return;}
+List f_kri(List L,(bool (*f)(Node N)){
+Node *=L.tail;
+List new_list;
+while(cur!=NULL){
+if ((*f)(*cur)){
+Node* new_n=new Node;
+add(new_list,(*new_n);}
+cur=cur->next;}  
+return new_list;}
