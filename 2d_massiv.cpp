@@ -44,14 +44,23 @@ N->next=end;
 N->prev=begin;
 return N}
 void delit(List &L,int pos){
+
 Node* cur=L.tail;
+if(cur==NULL){
+delete L.heat;
+return;}
+if(pos<=0){
+(cur->next)->prev=NULL;
+ L.tail=cur->next;
+  delete cur;
+  return;}  
 while(pos!=0 && cur!=NULL ){
 cur=cur->next;}
 if(cur==NULL){
 cur=L.heat;
 (*(cur->prev))=NULL;
 L.heat=cur->prev;
-delete cur
+delete cur;
 return;}
 (cur->prev)->next=(cur->next);
 delete cur;
