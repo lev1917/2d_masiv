@@ -10,7 +10,7 @@ struct Node
 };
 struct List
 {
-	Node* head;
+	Node* heat;
 	Node* tail;
 };
 Node find(List &L,Node &current);
