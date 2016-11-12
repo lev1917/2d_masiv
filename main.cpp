@@ -77,7 +77,7 @@ int main() {
 	}
 	sort(What_Way, 20);
 	
-	print(f_kri(f));
+	print(f_kri(( Main_List_ptr*),f));
 	
 	return 0;
 }
