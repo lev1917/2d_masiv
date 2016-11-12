@@ -14,7 +14,11 @@ struct List
 	Node* tail;
 };
 
-
+Node find(List &L, Node &current);
+void add_(List &L, Node &N, int pos = 0);
+void delit(List &L, int pos);
+bool zentr(Node N);
+List f_kri(List &L,bool(*f)(Node ));
 
 
 
