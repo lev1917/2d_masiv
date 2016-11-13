@@ -1,6 +1,22 @@
 #include<iostream>
 #include<cmath>
 #include "2d_maciv.hpp"
+void delet(List &L){
+int i=0;
+
+if(L.heat==NULL && L.tail==NULL){
+delete (&L);
+return;}
+if(L.tail==NULL){
+delete L.heat;
+delete(&L);
+return;}
+Node * cur=L.tail;
+while(cur!=NULL){
+cur=cur->next;
+delit(L);}
+delete (&L);
+return;}
 void print(List &L) {
 	Node*cur = L.heat;
 	while (cur = NULL) {
@@ -76,8 +92,11 @@ int main() {
 		What_Way[i] = way;
 	}
 	sort(What_Way, 20);
-	
-	print(f_kri(( Main_List_ptr*),f));
-	
+	List* L_P=new List;
+	(*L_P)=f_kri(( Main_List_ptr*),f);
+	print((*L_P);
+	delet((*L_P));
+	delet((*Main_List_ptr));
+	delete What_Way[];
 	return 0;
 }
